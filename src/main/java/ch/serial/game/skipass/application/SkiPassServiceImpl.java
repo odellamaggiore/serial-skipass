@@ -7,8 +7,8 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ch.serial.game.skipass.domain.model.forfait.SkiPass;
-import ch.serial.game.skipass.domain.model.forfait.SkiSession;
+import ch.serial.game.skipass.domain.model.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiSession;
 import ch.serial.game.skipass.domain.service.SkiPassRepository;
 
 @Service

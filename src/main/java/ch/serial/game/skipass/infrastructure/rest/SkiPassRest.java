@@ -1,5 +1,7 @@
 package ch.serial.game.skipass.infrastructure.rest;
 
+import ch.serial.game.skipass.infrastructure.dto.SkiPassInvoiceDto;
+
 
 /**
  * Skipass management rest interface
@@ -19,5 +21,12 @@ public interface SkiPassRest {
 	 * @param idSkiPass ski pass id
 	 */
 	void stopSessions(Long idSkiPass);
-
+	
+	/**
+	 * Get current month invoice for a ski pass
+	 * @param Ski pass id 
+	 * @return Invoice of the current month for the ski pass
+	 */
+	SkiPassInvoiceDto getCurrentMonthInvoice(Long idSkiPass);
+	
 }

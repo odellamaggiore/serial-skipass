@@ -1,7 +1,7 @@
 package ch.serial.game.skipass.domain.service;
 
-import ch.serial.game.skipass.domain.model.forfait.SkiSession;
-import ch.serial.game.skipass.domain.model.forfait.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiSession;
 
 /**
  * Skipass / sessions Repository

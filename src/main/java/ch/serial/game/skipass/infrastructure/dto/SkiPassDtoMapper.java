@@ -2,7 +2,7 @@ package ch.serial.game.skipass.infrastructure.dto;
 
 import org.mapstruct.Mapper;
 
-import ch.serial.game.skipass.domain.model.forfait.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiPass;
 
 @Mapper(uses = { SkiSessionDtoMapper.class }, componentModel = "spring")
 public interface SkiPassDtoMapper {

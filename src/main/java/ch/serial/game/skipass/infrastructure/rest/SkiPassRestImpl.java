@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.serial.game.skipass.application.SkiPassService;
+import ch.serial.game.skipass.infrastructure.dto.SkiPassInvoiceDto;
 
 @RestController
 @RequestMapping("rest/api/v1/forfaits")
@@ -32,5 +33,10 @@ public class SkiPassRestImpl implements SkiPassRest {
 	public void stopSessions(@PathVariable Long idSkiPass) {
 		skipassService.stopSessions(idSkiPass);
     }
-    
+
+	@Override
+	public SkiPassInvoiceDto getCurrentMonthInvoice(Long idSkiPass) {
+		throw new UnsupportedOperationException("Method not yet implemented");
+	}
+		
 }

@@ -1,5 +1,6 @@
 # serial-skipass
-Skipass
+
+Installation (spring-boot) :
 
 Build : `mvn clean install`
 Run : `mvn spring-boot:run`
@@ -8,15 +9,16 @@ Database console available at `http://localhost:8080/h2/`
 
 Database preloaded with skipass #200
 
-Starts ski session for a skipass and resort : 
+Démarrer une session de ski pour un forfait et une station : 
 
-PUT http://localhost:8080/forfaits/200/start
+PUT http://localhost:8080/rest/api/v1/forfaits/200/start
 Request Body (JSON) : idResort (Long)
 
-Stops all opened ski sessions for a skipass: 
+Le démarrage d'une nouvelle session de ski arrête automatiquement les sessions en cours pour le même forfait.
+Le démarrage d'une nouvelle session de ski alors qu'une session est déjà en cours pour le forfait et la station ne fait rien.
 
-PUT http://localhost:8080/forfaits/200/stop
+Stops arréter toutes les sessions de ski en cours pour un forfait.
+
+PUT http://localhost:8080/rest/api/v1/forfaits/200/stop
 Request Body (JSON) : empty
-
-
  

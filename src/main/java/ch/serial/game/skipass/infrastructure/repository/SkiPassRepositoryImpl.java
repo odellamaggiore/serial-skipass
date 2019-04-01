@@ -13,8 +13,8 @@ import javax.persistence.criteria.Root;
 
 import org.springframework.stereotype.Repository;
 
-import ch.serial.game.skipass.domain.model.forfait.SkiSession;
-import ch.serial.game.skipass.domain.model.forfait.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiSession;
 import ch.serial.game.skipass.domain.service.SkiPassRepository;
 
 @Repository

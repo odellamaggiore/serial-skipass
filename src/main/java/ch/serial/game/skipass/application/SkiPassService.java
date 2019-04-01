@@ -1,6 +1,6 @@
 package ch.serial.game.skipass.application;
 
-import ch.serial.game.skipass.domain.model.forfait.SkiPass;
+import ch.serial.game.skipass.domain.model.SkiPass;
 
 /**
  * Skipass application service interface
