@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ch.serial.game.skipass.application.SkiPassService;
 
 @RestController
-@RequestMapping("forfaits")
+@RequestMapping("rest/api/v1/forfaits")
 public class SkiPassRestImpl implements SkiPassRest {
 	
 	@Inject
