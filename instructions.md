@@ -6,12 +6,12 @@ A completer, présentation générale du sujet
 ```https://github.com/odellamaggiore/serial-skipass```
 
 - Repository à cloner pour le module frontend (angular) :
-```https://github.com/ccasenove/skipass```
+```https://github.com/ccasenove/serial-skipass-frontend```
 
 - Les tests unitaires doivent être inclus dans la solution transmise.
 
 # Exercice 1 : Liste des stations
-**Objectif** : Créér un enpoint REST permettant d'obtenir la liste des stations configurées dans le système et exploiter ce endpoint dans l'interface utilisateur.
+**Objectif** : Créér un endpoint REST permettant d'obtenir la liste des stations configurées dans le système et exploiter ce endpoint dans l'interface utilisateur.
 
 - Le endpoint doit respecter l'interface suivante : 
 ```java
@@ -23,12 +23,12 @@ List<ResortDto> listResort()
 	private String resortName;
 	private BigDecimal hourlyGrossPrice;
 ```
-- La table resort doit être créée, et alimentée avec quelques données de test a ajouter dans le fichier 
+- La table resort doit être créée, et alimentée avec quelques données de test à ajouter dans le fichier 
 ```sh
 src/main/resources/data.sql
 ```
 
-- Exploiter ce endpoint REST dans le projet front pour alimenter le dropdown **XXX** de la page **YYY** et rendre le choix de la station dynamique lors de l'appel à start.
+- Exploiter ce endpoint REST dans le projet front pour alimenter le dropdown **select-station** de la page **home** (MainComponent).
 
 # Exercice 2 : calcul de la facture du mois
 **Objectif** : Exposer en REST un service permettant de calculer et d'obtenir la facture du mois courant pour un forfait.
@@ -42,16 +42,16 @@ src/main/resources/data.sql
  	private BigDecimal invoiceGrossAmount;
  	private BigDecimal invoiceNetAmount;
 ```
-- Le montant brut de la facture doit être calculé en de la durée de chaque session et du prix brut par heure de chaque station (modélisé dans l'exerice 1).
+- Le montant brut de la facture doit être calculé en fonction de la durée de chaque session et du prix brut par heure de chaque station (modélisé dans l'exerice 1).
 - Le montant net de la facture doit être calculé à partir du taux de TVA qui sera stocké dans une property à ajouter dans le fichier application.properties.
 
-## Exercice 3 : Affichage de la facture du mois
-**Objectifs** : Exploiter le service rest développé dans l'exercice 2 pour afficher la facture détaillée du mois courant dans l'interface utilisateur.
+# Exercice 3 : Affichage de la facture du mois
+**Objectifs** : Exploiter le service REST développé dans l'exercice 2 pour afficher la facture détaillée du mois courant dans l'interface utilisateur.
 
 - Dans l'application front, créér une nouvelle page permettant de visualiser la facture du mois courant en exploitant le enpoint developpé dans l'exercice 2.
 ***<ajout instructions Cédric, composant à utiliser, maquette ?>***
 
-## Exercice 4 : Pull requests
+# Exercice 4 : Pull requests
 
 - A completer PR front
 - A completer PR back
