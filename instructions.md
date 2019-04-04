@@ -49,7 +49,9 @@ src/main/resources/data.sql
 **Objectifs** : Exploiter le service REST développé dans l'exercice 2 pour afficher la facture détaillée du mois courant dans l'interface utilisateur.
 
 - Dans l'application front, créér une nouvelle page permettant de visualiser la facture du mois courant en exploitant le enpoint developpé dans l'exercice 2.
-***<ajout instructions Cédric, composant à utiliser, maquette ?>***
+- Ajouter une route vers la nouvelle page
+- Ajouter une entrée dans le menu de navigation
+- Utiliser la bibliothèque [@swimlane/ngx-datatable](https://www.npmjs.com/package/@swimlane/ngx-datatable) pour afficher les données de la facture
 
 # Exercice 4 : Pull requests
 
