@@ -53,7 +53,3 @@ src/main/resources/data.sql
 - Ajouter une entrée dans le menu de navigation
 - Utiliser la bibliothèque [@swimlane/ngx-datatable](https://www.npmjs.com/package/@swimlane/ngx-datatable) pour afficher les données de la facture
 
-# Exercice 4 : Pull requests
-
-- A completer PR front
-- A completer PR back
