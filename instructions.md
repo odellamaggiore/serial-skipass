@@ -10,6 +10,7 @@ L'objectif est de développer la fonctionnalité 2 aux travers des exercices ci-
 # Instructions générales
 - Repository à cloner pour le module backend (spring-boot) :
 ```https://github.com/odellamaggiore/serial-skipass```
+Se référer au fichier README.md pour le démarrage du projet backend et l'interrogation des 2 services REST disponibles.
 
 - Repository à cloner pour le module frontend (angular) :
 ```https://github.com/ccasenove/serial-skipass-frontend```
