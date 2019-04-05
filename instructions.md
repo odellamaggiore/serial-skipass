@@ -1,5 +1,5 @@
 # Introduction
-L'exerice est axé autour d'un projet de gestion centralisée de forfait de ski, simulant la consommation à l'heure de "sessions" de ski, multi-stations. Le projet est organisé en deux modules : 
+L'exercice est axé autour d'un projet de gestion centralisée de forfait de ski, simulant la consommation à l'heure de "sessions" de ski, multi-stations. Le projet est organisé en deux modules : 
 - un module frontend (angular) offrant une interface web permettant à un utilisateur (titulaire d'un forfait) de :
 	1 - démarrer et arreter une session de ski dans une station
 	2 - visualiser la consommation (durée des sessions de ski et montant factué en fonction des stations) pour le mois courant. 
