@@ -1,13 +1,12 @@
 package ch.serial.game.skipass.domain.model;
 
+import ch.serial.game.skipass.domain.service.SkiPassRepository;
+
+import javax.inject.Inject;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import javax.inject.Inject;
-
-import ch.serial.game.skipass.domain.service.SkiPassRepository;
 
 public class SkiPass {
 

@@ -1,5 +1,6 @@
 package ch.serial.game.skipass.domain.model;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.UUID;
 
@@ -10,12 +11,21 @@ public class SkiSession {
 	private Instant endDate;
 	private Long idResort;
 	private Long idSkiPass;
-	
+	private BigDecimal skiSessionCost;
+
 	public SkiSession() {}
 	
 	public SkiSession(Instant startDate, Long idResort, Long idSkiPass) {
 		this.idSession = UUID.randomUUID();
 		this.startDate = startDate;
+		this.idResort = idResort;
+		this.idSkiPass = idSkiPass;
+	}
+
+	public SkiSession(Instant startDate, Instant endDate, Long idResort, Long idSkiPass) {
+		this.idSession = UUID.randomUUID();
+		this.startDate = startDate;
+		this.endDate = endDate;
 		this.idResort = idResort;
 		this.idSkiPass = idSkiPass;
 	}
@@ -59,5 +69,12 @@ public class SkiSession {
 	public void setIdSkiPass(Long idSkiPass) {
 		this.idSkiPass = idSkiPass;
 	}
-	
+
+	public BigDecimal getSkiSessionCost() {
+		return skiSessionCost;
+	}
+
+	public void setSkiSessionCost(BigDecimal skiSessionCost) {
+		this.skiSessionCost = skiSessionCost;
+	}
 }

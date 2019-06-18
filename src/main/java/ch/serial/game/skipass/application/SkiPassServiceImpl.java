@@ -1,15 +1,13 @@
 package ch.serial.game.skipass.application;
 
-import java.util.List;
-
-import javax.inject.Inject;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import ch.serial.game.skipass.domain.model.SkiPass;
 import ch.serial.game.skipass.domain.model.SkiSession;
 import ch.serial.game.skipass.domain.service.SkiPassRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.inject.Inject;
+import java.util.List;
 
 @Service
 public class SkiPassServiceImpl implements SkiPassService {

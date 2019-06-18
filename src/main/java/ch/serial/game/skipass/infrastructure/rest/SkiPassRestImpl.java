@@ -1,17 +1,14 @@
 package ch.serial.game.skipass.infrastructure.rest;
 
-import javax.inject.Inject;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-
+import ch.serial.game.skipass.application.SkiPassInvoiceService;
 import ch.serial.game.skipass.application.SkiPassService;
+import ch.serial.game.skipass.domain.model.SkiPassInvoice;
 import ch.serial.game.skipass.infrastructure.dto.SkiPassInvoiceDto;
+import ch.serial.game.skipass.infrastructure.dto.SkiPassInvoiceDtoMapper;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import javax.inject.Inject;
 
 @RestController
 @RequestMapping("rest/api/v1/forfaits")
@@ -19,7 +16,13 @@ public class SkiPassRestImpl implements SkiPassRest {
 	
 	@Inject
 	SkiPassService skipassService;
-	
+
+	@Inject
+	SkiPassInvoiceService skiPassInvoiceService;
+
+	@Inject
+	SkiPassInvoiceDtoMapper skiPassInvoiceDtoMapper;
+
 	@Override
     @PutMapping(value = "/{idSkiPass}/start")
     @ResponseStatus(HttpStatus.OK)
@@ -35,8 +38,10 @@ public class SkiPassRestImpl implements SkiPassRest {
     }
 
 	@Override
-	public SkiPassInvoiceDto getCurrentMonthInvoice(Long idSkiPass) {
-		throw new UnsupportedOperationException("Method not yet implemented");
+	@GetMapping(value = "/{idSkiPass}/invoice")
+	public SkiPassInvoiceDto getCurrentMonthInvoice(@PathVariable Long idSkiPass) {
+	    SkiPassInvoice skiPassInvoice = skiPassInvoiceService.genenerateCurrentMonthInvoiceForASkiPass(idSkiPass);
+	    return skiPassInvoiceDtoMapper.toSkiPassInvoiceDto(skiPassInvoice);
 	}
 		
 }
